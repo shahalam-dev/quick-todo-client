@@ -10,6 +10,7 @@ const Task = ({ taskData }) => {
     );
     taskListRefetch();
   };
+
   return (
     <>
       {taskData?.task_status === "undone" && (
