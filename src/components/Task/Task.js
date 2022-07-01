@@ -6,7 +6,7 @@ const Task = ({ taskData }) => {
   const { taskListRefetch } = useTaskData();
   const handleUpdateStatus = async () => {
     await axios.get(
-      `https://quick-todo-assessment.herokuapp.com/update-status?id=${taskData._id}`
+      `${process.env.REACT_APP_server_base_url}/update-status?id=${taskData._id}`
     );
     taskListRefetch();
   };

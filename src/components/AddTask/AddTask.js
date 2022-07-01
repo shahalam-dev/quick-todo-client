@@ -18,7 +18,7 @@ const AddTask = () => {
       status: "undone",
     };
     await axios.post(
-      `https://quick-todo-assessment.herokuapp.com/add-task?uid=${user.uid}&email=${user.email}`,
+      `${process.env.REACT_APP_server_base_url}/add-task?uid=${user.uid}&email=${user.email}`,
       payload
     );
     taskRef.current.value = "";

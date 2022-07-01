@@ -13,7 +13,7 @@ const useTaskData = () => {
     "taskData",
     async () =>
       await axios.get(
-        `https://quick-todo-assessment.herokuapp.com/tasks-list?uid=${user.uid}&email=${user.email}`
+        `${process.env.REACT_APP_server_base_url}/tasks-list?uid=${user.uid}&email=${user.email}`
       )
   );
 
